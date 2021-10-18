@@ -1,0 +1,15 @@
+.teamsContainer{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    padding: 1vh;
+    box-shadow: 0 0 10px 3px rgb(230, 219, 219);
+}
+.label{
+    display: inline-block;
+}
+.team{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}

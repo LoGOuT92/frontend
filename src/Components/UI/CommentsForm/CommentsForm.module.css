@@ -1,0 +1,46 @@
+.CommentFormContainer{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    padding: 3rem;
+}
+
+.form{
+    display:flex;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.form div{
+    text-align: center;
+    color: red;
+}
+.form textarea{
+    max-width: 98%;
+    min-width: 50%;
+    height: 10vh;
+    max-height: 30vh;
+    padding: 1rem;
+}
+.button{
+    display: inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #2c2a2a;
+    box-shadow: 0px 0px 10px 3px rgb(201, 19, 19);
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.4em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    text-align:center;
+    transition: all 0.2s;
+    margin-top: 1vh;
+}
+.button:hover{
+    color:#000000;
+    background-color:#FFFFFF;
+    box-shadow: 0px 0px 10px 3px rgb(255, 0, 0);
+    }

@@ -2,10 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -23,9 +19,31 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover{
+  color: white;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+}
 
 .App-link {
   color: #61dafb;
+}
+@font-face {
+  font-family: 'quantumregular';
+  src: local('MyFont'), url('./assets/quantum/Nowyfolder/quantum-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
 }
 
 @keyframes App-logo-spin {

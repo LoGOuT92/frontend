@@ -1,0 +1,17 @@
+.MatchesContainer {
+    display: flex;
+    color: white;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+@media (max-width: 1045px) {
+    .MatchesContainer{
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 2rem;
+    }
+
+}

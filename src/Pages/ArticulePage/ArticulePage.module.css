@@ -1,0 +1,53 @@
+.ArticulePageContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.header{
+    width: 100%;
+    color: rgb(0, 0, 0);
+    height: 10%;
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    transform: translate(00%, -200%);
+    background-color: rgb(223, 217, 217);
+    opacity: 0.8;
+    font-size: 1.2rem;
+}
+.text{
+    width: 100%;
+    color: white;
+    display: flex;
+    box-shadow: 0 0 10px 3px #000;
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    opacity: 0.85;
+    flex-direction: column;
+    text-align: center;
+}
+.text h5{
+    padding: 1rem;
+    line-height: 1.5;
+}
+
+.image{
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 0 10px 3px red;
+}
+.image img{
+    width: 100%;
+    height: max-content;
+    object-fit: cover;
+}

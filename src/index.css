@@ -5,9 +5,22 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(37, 35, 35);
+  box-shadow:
+    inset 60px 0 120px rgb(221, 13, 48),  /* left magenta */
+    inset -60px 0 120px rgb(221, 13, 48); /* right cyan */
+  color: rgb(0, 0, 0);
+  font-family: quantumregular;
+  letter-spacing: 1px;
+
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: "Google Sans",Roboto,Arial,Helvetica,sans-serif;
+}
+@font-face {
+  font-family: 'quantumregular';
+  src: local('quantumregular'), url(./fonts/quantum-webfont.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
 }

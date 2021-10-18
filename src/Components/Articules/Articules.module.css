@@ -1,0 +1,16 @@
+.ArticulesContainner{
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    padding: 4rem;
+    justify-content: center;
+}
+.ArticulesRow {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 4rem;
+    height: max-content;
+}
+
+
