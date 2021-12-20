@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(37, 35, 35);
+  background-color: rgb(24, 23, 23);
   box-shadow:
     inset 60px 0 120px rgb(221, 13, 48),  /* left magenta */
     inset -60px 0 120px rgb(221, 13, 48); /* right cyan */
@@ -16,11 +16,13 @@ body {
 }
 
 code {
-  font-family: "Google Sans",Roboto,Arial,Helvetica,sans-serif;
+  /* font-family: "Google Sans",Roboto,Arial,Helvetica,sans-serif; */
+  font-family: 'Poppins', sans-serif;
 }
-@font-face {
+/* @font-face {
   font-family: 'quantumregular';
   src: local('quantumregular'), url(./fonts/quantum-webfont.woff) format('woff');
   font-weight: normal;
   font-style: normal;
-}
+} */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');

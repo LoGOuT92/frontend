@@ -1,0 +1,63 @@
+.matchAdminContainer{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.matchConfig{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 90%;
+    justify-content: space-evenly;
+    margin-bottom: 5vh;
+}
+.config{
+    visibility: hidden;
+}
+.visibility{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 5px;
+}
+.borderActive{
+    border-bottom:1px solid red;
+}
+.contentMatch{
+    display: flex;
+    justify-content: space-evenly;
+}
+.temasConfing{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.temasConfing input{
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+.dateConfig{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.summary{
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.addMatchButton{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.addMatchButton button{
+    width: max-content;
+}

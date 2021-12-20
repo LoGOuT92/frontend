@@ -1,0 +1,90 @@
+.TripContainer{
+    display: flex;
+    border: 2px solid rgb(0, 0, 0);
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgb(135,40,40);
+    background: linear-gradient(143deg, rgba(135,40,40,1) 15%, rgba(224,19,19,1) 30%, rgba(0,0,0,1) 31%, rgba(0,0,0,1) 52%, rgba(255,0,0,1) 53%, rgba(135,40,40,1) 75%);
+    cursor: pointer;
+    transition: all 0.6s;
+    
+}
+.TripContainer:hover{
+    transform: scale(1.02);
+    border: 2px solid rgb(255, 196, 0);
+}
+.TripContainer li{
+    list-style: none;
+    display: flex;
+    padding: 3px;
+}
+.dropDownButton{
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.dropDownButton label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dropListHidden{
+    display: none;
+    margin: 0;
+}
+.dropList{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    gap: 2px;
+    justify-content: center;
+    margin: 0;
+    position: relative;
+    
+}
+.dropList li{
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-top: 5px;
+    background-color:black;
+}
+.dropList li:hover{
+    transition: all 0.8s;
+    background-color:rgb(192, 192, 192);
+    color: black;
+    box-shadow: 0px 0px 10px 3px rgb(255, 0, 0);
+}
+.tripsForm{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-end;    
+    gap: 5px;
+
+}
+.TripFormContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.tripsForm input{
+    display: flex;
+    flex-direction: row;
+    width: 110px;
+}

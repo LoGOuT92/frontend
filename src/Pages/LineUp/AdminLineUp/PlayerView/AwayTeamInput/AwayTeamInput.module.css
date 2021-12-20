@@ -1,0 +1,36 @@
+.awayTeamInputContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 1px solid red;
+    border-radius: 10px;
+    padding: 5px;
+    color: white;
+}
+.awayTeamInputs{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.awayTeamLogic{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.setNumberInput{
+    width: 40px;
+    display: flex;
+}
+.awayTeamList{
+    margin-top: 10px;
+    display: flex;
+    color: white;
+    justify-content: center;
+    gap: 5px;
+}
+.awayTeamList label{
+    display: flex;
+}

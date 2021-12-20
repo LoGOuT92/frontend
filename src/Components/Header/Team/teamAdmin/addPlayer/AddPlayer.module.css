@@ -1,0 +1,53 @@
+.addPlayerContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+    padding: 10px;
+}
+.addPlayerInputs{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2vh;
+}
+.addPlayerSummary{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+.addPlayerSummary ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 10px;
+}
+.addPlayerSummary li{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.PositionList{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 3px;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+.PositionList li{
+    cursor: pointer;
+    list-style: none;
+    border: 1px solid red;
+    width: 100%;
+    padding: 3px;
+    border-radius: 10px;
+}
+.addPlayerInputs input{
+    display: flex;
+    width: 100%;
+}

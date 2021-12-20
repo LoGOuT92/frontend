@@ -1,0 +1,25 @@
+.playerViewContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    border: 1px solid rgb(233, 192, 215);
+    border-radius: 10px;
+    padding: 2px;
+}
+.playerPositionsView{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.playersSelectedListContainer{
+    display: flex;
+    flex-direction: column;
+    color: rgb(255, 0, 0);
+    gap: 2px;
+}
+.playersSelectedListContainer li{
+    list-style: none;
+    color: white;
+    border-radius: 5px;
+}

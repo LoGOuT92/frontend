@@ -1,0 +1,15 @@
+.DeletePlayerContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.DeletePlayerSummary{
+    display: flex;
+    width: 100%;
+}
+.DeletePlayerSummary li{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}

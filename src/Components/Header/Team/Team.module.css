@@ -1,0 +1,30 @@
+.teamContainer{
+    display: flex;
+    justify-content: center;
+    color: white;
+    gap: 3vh;
+    padding: 10px;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.TeamPositions{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+}
+.teamPos{
+    display: flex;
+    justify-content: center;
+    gap: 3vh;
+    flex-wrap: wrap;
+}
+.positon{
+    border-bottom: 5px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1.2rem;
+}

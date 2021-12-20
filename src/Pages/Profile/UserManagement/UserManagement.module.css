@@ -1,0 +1,60 @@
+.userPermissionsContainer{
+    display: flex;
+    box-shadow: 0px 0px 10px 3px rgb(145, 40, 40);
+    border-radius: 20px;
+    padding: 10px;
+    transition: all 0.6s;
+    gap: 3vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.userPermissionsContainer:hover{
+    box-shadow: 0px 0px 10px 3px rgb(255, 0, 0);
+    border-radius: 20px;
+}
+.userPermissionsMainContent{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.userPermissionsOptions{
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+.moreUsers{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px 3px rgb(71, 70, 70);
+    border-radius: 10px;
+    padding: 10px;
+}
+.OptionsForUsers{
+    display: flex;
+    flex-direction: row;
+    margin-top: 25px;
+}
+.moreUsers label{
+    color: rgb(255, 174, 0);
+}
+.userPermissionsContainer form{
+    display: flex;
+    flex-direction: row;
+}
+.labelUsername{
+    margin-top: 10px;
+    border: 1px solid red;
+    box-shadow: 0px 0px 10px 3px rgb(216, 15, 15);
+    border-radius: 10px;
+    padding: 2px;
+}
+.saveButton button{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}

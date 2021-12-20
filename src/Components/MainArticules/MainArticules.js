@@ -1,24 +1,25 @@
-import React, { useState } from 'react'
-import styles from './MainArticules.module.css';
-import MainArticule from './MainArticule/MainArticule';
+import React, { useState, useEffect } from "react";
+import styles from "./MainArticules.module.css";
+import MainArticule from "./MainArticule/MainArticule";
+import axios from "axios";
 
 export default function MainArticules() {
+  const [articule, setArticule] = useState([]);
 
-    const initialArticule=[
-        {
-            id: 1,
-            header: "PRIMAVERA BEATEN BY SAMP: 2-0 AT VISMARA VISMARAVISMARA VISMARAVISMARAVISMARA asdsad asd"
-        },
-        {
-            id: 2,
-            header: "bbbbbbbbbbbbbbbbbbbbbbbbbb"
-        }
-    ]
-    const [articule]=useState(initialArticule)
+  const fetchPosts = async () => {
+    const res = await axios.get("http://localhost:3001/api/post");
+    setArticule(res.data.posts.reverse().slice(0, 2));
+  };
 
-    return (
-        <div className={styles.MainArticulesContainer}>
-            {articule.map(articule=><MainArticule key={articule.id}{...articule}/>)}
-        </div>
-    )
+  useEffect(() => {
+    fetchPosts();
+  }, []);
+
+  return (
+    <div className={styles.MainArticulesContainer}>
+      {articule.map((articule) => (
+        <MainArticule key={articule.slug} {...articule} />
+      ))}
+    </div>
+  );
 }

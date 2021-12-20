@@ -1,0 +1,23 @@
+.singlePlayerView{
+    display: flex;
+    border: 2px solid rgb(223, 13, 13);
+    color: white;
+    flex-wrap: wrap;
+    background-color: rgb(37, 35, 35);
+    padding: 2px;
+    box-shadow: inset 60px 0 120px rgb(31 20 22), inset -60px 0 120px rgb(0 0 0);
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+.singlePlayerView:hover{
+    box-shadow:
+    inset 60px 0 120px rgb(240, 2, 41),
+    inset -60px 0 120px rgb(0, 0, 0);
+    cursor: pointer;
+}
+.test{
+    border-color: red;
+}

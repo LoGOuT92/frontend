@@ -38,13 +38,12 @@ h6 {
 .App-link {
   color: #61dafb;
 }
-@font-face {
+/* @font-face {
   font-family: 'quantumregular';
   src: local('MyFont'), url('./assets/quantum/Nowyfolder/quantum-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-
-}
+} */
 
 @keyframes App-logo-spin {
   from {

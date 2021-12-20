@@ -1,0 +1,42 @@
+.EditPlayerContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 5px;
+}
+.EditPlayerSummary{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.EditPlayerSummary li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.EditPlayerSummary ul{
+    display: flex;
+    flex-direction: column;
+}
+.EditPlayerTerm{
+    display: flex;
+    flex-direction: column;
+}
+.PositionList{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 3px;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+.PositionList li{
+    cursor: pointer;
+    list-style: none;
+    border: 1px solid red;
+    width: 100%;
+    padding: 3px;
+    border-radius: 10px;
+}

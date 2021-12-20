@@ -1,0 +1,97 @@
+.teamsContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.lineUpImg{
+    display: flex;
+    width: 50%;
+    position: relative;
+}
+.lineUpImg img{
+    width: 100%;
+}
+.pitchLineUp{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0px;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+.sideTeamLineUp{
+    display: flex;
+    flex: 0 0 50%;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: space-around;
+}
+.sideTeamLineUp2{
+    display: flex;
+    flex: 0 0 50%;
+    flex-direction: row-reverse;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: space-around;
+}
+.columnLine{
+    display: flex;
+    -webkit-box-align: center;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-around;
+    width: 20px;
+    height: 100%;
+}
+.singlePlayer{
+    position: relative;
+    display: flex;
+    width: 20px;
+    height: 20px;
+    border-radius: 25px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    color: white;
+    font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    background-color: red;
+}
+.lab{
+    display: flex;
+    position: absolute;
+    transform: translate(0,100%);
+    color: black;
+}
+.HomeSub{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+.separator{
+    width: 3px;
+    background-color: rgb(104, 16, 247);
+}
+.HomeSubLabel{
+    border: 2px solid red;
+    border-radius:10px;
+}
+.HomeLabel{
+    border: 2px solid red;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-radius: 10px;
+}
+.playerMap{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}

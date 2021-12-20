@@ -34,6 +34,25 @@
     color: rgb(255, 255, 255);
     justify-content: space-evenly;
 }
+.addScore{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.addScore firstOfType input{
+    width: 20px;
+}
+.addScore input{
+    width: 150px;
+}
+.goalScorer{
+    display: flex;
+    flex-direction: column;
+}
+.goalScorer label{
+   display: flex;
+   gap: 5px;
+}
 svg{
     display: flex;
     width: 100%;
@@ -47,6 +66,9 @@ svg{
 @media (max-width: 450px) {
     .logo img{
         width: 10vh;
+    }
+    .addScore input{
+        width: 70px;
     }
 
 }

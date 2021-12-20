@@ -1,0 +1,4 @@
+.LineUpContainer{
+    display: flex;
+    flex-direction: column;
+}

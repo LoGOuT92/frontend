@@ -66,8 +66,12 @@
 }
 .authOptions{
     display: flex;
-    flex-direction: row;
-    gap: 5vw;
+    flex-direction: column;
+    gap: 5px;
+}
+.authContainer{
+display: flex;
+flex-direction: column;
 }
 .headerContainer .logo{
     display: flex;

@@ -1,0 +1,11 @@
+.addReplyContainer{
+    display: flex;
+    width: 85%;
+    color: white;
+    padding: 3px;
+    border-radius: 10px;
+    gap: 5px;
+}
+.addReplyContainer textarea{
+    width: 100%;
+}

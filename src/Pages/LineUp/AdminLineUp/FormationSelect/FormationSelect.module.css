@@ -1,0 +1,12 @@
+.formationSelectContainer{
+    display: flex;
+    border: 1px solid orange;
+    border-radius:10px;
+    padding: 2px;
+    flex-direction: column;
+    color: rgb(9, 231, 176);
+}
+.summaryFormation{
+    color: white;
+    width: max-content;
+}

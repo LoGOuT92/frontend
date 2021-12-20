@@ -2,9 +2,11 @@ import React,{ useState} from 'react';
 import styles from './Pagination.module.styles.css';
  export default function Pagination({ data, RenderComponent, title, pageLimit, dataLimit }) {
     const [pages] = useState(Math.round(data.length / dataLimit));
+
     const [currentPage, setCurrentPage] = useState(1);
-  
+
     function goToNextPage() {
+
         setCurrentPage((page) => page + 1);
       }
   
@@ -24,8 +26,16 @@ import styles from './Pagination.module.styles.css';
       };
   
       const getPaginationGroup = () => {
-        let start = Math.floor((currentPage - 1) / pageLimit) * pageLimit;
-        return new Array(pageLimit).fill().map((_, idx) => start + idx + 1);
+        let pageL = parseInt(pageLimit)
+        let x = data.length/pageL
+
+        if((data.length/pageL)/parseInt(x)>1){
+          let start = Math.floor((currentPage - 1) / pageL) * pageL;
+          return new Array(pageL+1).fill().map((_, idx) => start + idx + 1);
+        }
+        let start = Math.floor((currentPage - 1) / pageL) * pageL;
+        return new Array(pageL).fill().map((_, idx) => start + idx + 1);
+        
       };
   
       return (

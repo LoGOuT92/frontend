@@ -1,0 +1,49 @@
+.playerContainer{
+    display: flex;
+    border: 2px solid;
+    position: relative;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.playerContainer:hover{
+    background-color: rgb(27, 26, 26);
+    box-shadow:0px 0px 5px 1px rgb(255, 255, 255);
+    transform: scale(1.1);
+}
+.player{
+    display: flex;
+    height: 200px;
+    width: 150px;
+    position: relative;
+    justify-content: center;
+}
+.player img{
+    width: 100%;
+    border-radius: 10px;
+}
+.name{
+    display: flex;
+    position: absolute;
+    transform: translate(0%,150%);
+    font-size: 1.5em;
+}
+.surname{
+    display: flex;
+    position: absolute;
+    transform: translate(0%,250%);
+    font-size: 1.5em;
+}
+.line{
+    display: flex;
+    position: absolute;
+    transform: translate(0%, 4000%);
+    border: 2px solid red;
+    border-radius: 30px;
+    width: 80%;
+}
+.number{
+    display: flex;
+    position: absolute;
+    transform: translate(0%, 600%);
+    font-size: 1.2em;
+}

@@ -3,7 +3,6 @@
     flex-direction: column;
     align-items: center;
     padding: 1rem;
-    margin: 1rem;
 }
 
 .header{
@@ -50,4 +49,10 @@
     width: 100%;
     height: max-content;
     object-fit: cover;
+}
+@media (max-width: 420px) {
+    .ArticulePageContainer{
+        padding: 0.3rem;
+    }
+
 }

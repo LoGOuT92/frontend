@@ -1,0 +1,7 @@
+.FormationInput{
+    display:flex;
+    gap: 2px;
+}
+.FormationInput label{
+    color: white;
+}

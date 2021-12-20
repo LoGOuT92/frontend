@@ -1,0 +1,20 @@
+.AdminLineUp{
+    display: flex;
+    flex-direction: column;
+    color: white;
+
+}
+.homeTeamSelect{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 2px solid rgb(255, 166, 0);
+    border-radius: 10px;
+    padding: 5px;
+}
+.formationSet{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
