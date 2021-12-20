@@ -48,13 +48,13 @@ function App(props) {
     //newArray[comment.id-1].comments.comment.push(comment)
     newArray[comment.id-1].comments.comment.push(comment)
     setArray(newArray)
-    //console.log(newArray[comment.id-1].comments.comment);
+    console.log(newArray[comment.id-1].comments.comment);
   }
 
   const header =(
     <>
     <Route path="/">
-      <Header />
+      <Header  />
     </Route>
     <Route path="/login/" component={LoginPage}/>
     <Route path="/profile/" component={Profile}/>
