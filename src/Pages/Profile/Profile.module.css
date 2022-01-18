@@ -6,6 +6,7 @@
     flex-direction: column;
     height:max-content;
     min-height: 100vh;
+    
 }
 
 .options{
@@ -17,12 +18,14 @@
     justify-content: space-evenly;
     margin-bottom: 5vh;
     flex-direction: row;
+    flex-direction: column;
 }
 
 .options label{
     transition: 0.5s;
     cursor: pointer;
     border-bottom: 2px solid rgb(0, 0, 0);
+    flex-wrap: wrap;
 }
 .options label:hover{
     padding: 0.2rem;

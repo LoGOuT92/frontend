@@ -30,6 +30,7 @@ export default function CommentForm(props) {
         {
           headers: {
             Authorization: `Bearer ${tokenData}`,
+            Collections: props.collection,
           },
         }
       );

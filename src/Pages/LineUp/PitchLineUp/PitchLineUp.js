@@ -89,12 +89,12 @@ export default function PitchLineUp(props) {
             {setFormation(
               props.match.AwayTeam.Color,
               props.match.AwayTeam.Formation,
-              props.match.HomeTeam.Team
+              props.match.AwayTeam.Team
             )}
           </div>
         </div>
       </div>
-      {plyerMap(props.match.HomeTeam.Team, true)}
+      {plyerMap(props.match.AwayTeam.Team, true)}
     </div>
   );
 }

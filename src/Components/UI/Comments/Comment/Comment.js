@@ -32,7 +32,6 @@ export default function Comment(props) {
       setLike(0);
       setValue(0);
     }
-    console.log(props.user.image);
     const userID = JSON.parse(window.localStorage.getItem("user"));
     if (userID) {
       const found = props.likes.find((x) => x.user === userID._id);
@@ -75,6 +74,7 @@ export default function Comment(props) {
         {
           headers: {
             Authorization: `Bearer ${tokenData}`,
+            Collections: props.collection,
           },
         }
       );
@@ -96,10 +96,15 @@ export default function Comment(props) {
           repID: repID,
           user: userID._id,
           value: val,
+        },
+        {
+          headers: {
+            Collections: props.collection,
+          },
         }
       );
 
-      setReplays(res.data.repies.reverse());
+      setReplays(res.data.repies);
       setLoading(false);
     } catch (err) {
       console.log(err);
@@ -125,6 +130,7 @@ export default function Comment(props) {
         {
           headers: {
             Authorization: `Bearer ${tokenData}`,
+            Collections: props.collection,
           },
         }
       );
@@ -138,7 +144,6 @@ export default function Comment(props) {
   const deleteReply = async (id) => {
     const tokenDataJson = window.localStorage.getItem("token-data");
     const tokenData = JSON.parse(tokenDataJson);
-    setLoading(true);
     try {
       const res = await axios.put(
         `http://localhost:3001/api/post/commentsReplyDelete/${props.id}`,
@@ -149,6 +154,7 @@ export default function Comment(props) {
         {
           headers: {
             Authorization: `Bearer ${tokenData}`,
+            Collections: props.collection,
           },
         }
       );
@@ -174,6 +180,7 @@ export default function Comment(props) {
                     <div className={styles.avatar}>
                       <img
                         src={`http://localhost:3001/public/uploads/${props.user.image}`}
+                        alt="userImage"
                       />
                     </div>
                     <div className={styles.info}>
@@ -205,7 +212,7 @@ export default function Comment(props) {
                     <div className={styles.interactionsContainer}>
                       {auth.isModerator ||
                       (auth.isAdmin && auth.isAuthenticated) ||
-                      props.user._id == _id ? (
+                      props.user._id === _id ? (
                         <div className={styles.editOptions}>
                           {deleteVisibility ? (
                             <div>
@@ -244,7 +251,7 @@ export default function Comment(props) {
                         </div>
                       ) : null}
                       <div className={styles.likesContainer}>
-                        {props.user._id == _id ? null : (
+                        {props.user._id === _id ? null : (
                           <svg
                             viewBox="0 0 24 24"
                             className={styles.like}
@@ -269,7 +276,7 @@ export default function Comment(props) {
                         >
                           {like}
                         </div>
-                        {props.user._id == _id ? null : (
+                        {props.user._id === _id ? null : (
                           <svg
                             viewBox="0 0 24 24"
                             className={styles.dislike}
@@ -300,6 +307,7 @@ export default function Comment(props) {
                         key={reply._id}
                         postID={props.id}
                         commID={props._id}
+                        {...props}
                         deleteReply={(id) => deleteReply(id)}
                         {...reply}
                         likesReplyCountHandler={(repID, val) =>

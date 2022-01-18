@@ -1,7 +1,5 @@
 import React from "react";
 import styles from "./Match.module.css";
-import logo1 from "../../../assets/images/Logos/milan.png";
-import logo2 from "../../../assets/images/Logos/inter.png";
 import { Link } from "react-router-dom";
 
 export default function Match(props) {
@@ -12,7 +10,10 @@ export default function Match(props) {
       <Link to={`/match/${_id}`}>
         <div className={styles.LogosContainer}>
           <div>
-            <img src={logo1} alt="logoHome"></img>
+            <img
+              src={`http://localhost:3001/public/uploads/${HomeTeam.Logo}`}
+              alt="Home Team Logo"
+            />
             <div>
               <h3>{HomeTeam.Name}</h3>
             </div>
@@ -31,7 +32,10 @@ export default function Match(props) {
             <h1>{AwayTeam.Score}</h1>
           </div>
           <div>
-            <img src={logo2} alt="logoAway"></img>
+            <img
+              src={`http://localhost:3001/public/uploads/${AwayTeam.Logo}`}
+              alt="Away Team Logo"
+            />
             <div>
               <h3>{AwayTeam.Name}</h3>
             </div>

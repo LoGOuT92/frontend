@@ -18,6 +18,7 @@ import axios from "axios";
 import Team from "./Components/Header/Team/Team";
 import Trips from "./Components/Header/Trips/Trips";
 import Trophies from "./Components/Header/Trophies/Trophies";
+import History from "./Components/Header/History/History";
 
 function App() {
   const [isAuthenticated, setisAuthenticated] = useState(false);
@@ -64,10 +65,6 @@ function App() {
       <Route path="/">
         <Header />
       </Route>
-      {/* <Route path="/login/" component={LoginPage} />
-      <Route path="/profile/" component={Profile} />
-      <Route path="/register/" component={Register} />
-      <Route path="/kadra/" component={Team} /> */}
     </>
   );
   const content = (
@@ -85,6 +82,7 @@ function App() {
       <Route path="/kadra/" component={Team} />
       <Route path="/zapisy/" component={Trips} />
       <Route path="/trofea/" component={Trophies} />
+      <Route path="/historia/" component={History} />
       <Route exact path="/">
         <MainArticules />
         <Matches />

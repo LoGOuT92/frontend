@@ -12,7 +12,10 @@ export default function LastMatch(props) {
       <Link to={`/lastMatch/${_id}`}>
         <div className={styles.LogosContainer}>
           <div>
-            <img src={logo1} alt="logo1"></img>
+            <img
+              src={`http://localhost:3001/public/uploads/${HomeTeam.Logo}`}
+              alt="Home Team Logo"
+            />
             <div>
               <h5>{HomeTeam.Name}</h5>
             </div>
@@ -32,7 +35,10 @@ export default function LastMatch(props) {
           </div>
 
           <div>
-            <img src={logo2} alt="logo2"></img>
+            <img
+              src={`http://localhost:3001/public/uploads/${AwayTeam.Logo}`}
+              alt="Away Team Logo"
+            />
             <div>
               <h5>{AwayTeam.Name}</h5>
             </div>

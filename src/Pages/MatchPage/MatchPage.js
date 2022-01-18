@@ -2,7 +2,6 @@ import React, { useEffect, useState, useContext } from "react";
 import styles from "./MatchPage.module.css";
 import logo1 from "../../assets/images/Logos/milan.png";
 import logo2 from "../../assets/images/Logos/inter.png";
-// import PitchLineUp from '../LineUp/PitchLineUp/PitchLineUp';
 import LineUp from "../LineUp/LineUp";
 import Comments from "../../Components/UI/Comments/Comments";
 import LoadingIcon from "../../Components/UI/LoadingIcon/LoadingIcon";
@@ -20,9 +19,8 @@ export default function MatchPage(props) {
     minute: 0,
     score: "",
   });
-
   const auth = useContext(AuthContext);
-  const fetchMatch = async (props) => {
+  const fetchMatch = async () => {
     try {
       const res = await axios.get(`http://localhost:3001/api/getMatch/${id}`);
       setMatch(res.data.match);
@@ -34,7 +32,7 @@ export default function MatchPage(props) {
     }
     setLoading(false);
   };
-  useEffect((e) => {
+  useEffect(() => {
     fetchMatch();
   }, []);
 
@@ -87,6 +85,11 @@ export default function MatchPage(props) {
           commentID: commID,
           user: userID._id,
           value: value,
+        },
+        {
+          headers: {
+            Collections: "match",
+          },
         }
       );
       if (res.data.comments) {
@@ -96,7 +99,6 @@ export default function MatchPage(props) {
       console.log(err);
     }
   };
-  console.log(comments);
   return (
     <>
       {loading ? (
@@ -135,18 +137,24 @@ export default function MatchPage(props) {
             </div>
             <div className={styles.score}>
               <h1>:</h1>
-              <div className={styles.addScore}>
-                <input
-                  type="number"
-                  style={{ width: "40px" }}
-                  value={goal.minute}
-                  onChange={(e) => setGoal({ ...goal, minute: e.target.value })}
-                ></input>
-                <input
-                  value={goal.score}
-                  onChange={(e) => setGoal({ ...goal, score: e.target.value })}
-                ></input>
-              </div>
+              {auth.isAdmin || auth.isModerator ? (
+                <div className={styles.addScore}>
+                  <input
+                    type="number"
+                    style={{ width: "40px" }}
+                    value={goal.minute}
+                    onChange={(e) =>
+                      setGoal({ ...goal, minute: e.target.value })
+                    }
+                  ></input>
+                  <input
+                    value={goal.score}
+                    onChange={(e) =>
+                      setGoal({ ...goal, score: e.target.value })
+                    }
+                  ></input>
+                </div>
+              ) : null}
             </div>
             <div>
               <h1>{match.AwayTeam.Score}</h1>
@@ -217,14 +225,14 @@ export default function MatchPage(props) {
               Musisz byc zalogowany by dodac komentarz
             </div>
           )}
-          {/* <Comments
+          <Comments
             commets={comments}
             collection={"match"}
             id={id}
             likesCountHandler={(comID, value) =>
               likesCountHandler(comID, value)
             }
-          /> */}
+          />
         </div>
       )}
     </>

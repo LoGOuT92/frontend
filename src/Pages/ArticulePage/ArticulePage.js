@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
 import styles from "./ArticulePage.module.css";
-import image from "../../assets/images/articules/Przechwytywanie.PNG";
 import Comments from "../../Components/UI/Comments/Comments";
 import { useParams } from "react-router-dom";
 import CommentForm from "../../Components/UI/CommentsForm/CommentForm";
@@ -21,12 +20,10 @@ export default function ArticulePage(props) {
     editHeader: "",
     editContext: "",
   });
-  console.log(comments, slug);
   const fetchArticule = async () => {
     try {
       const res = await axios.get(`http://localhost:3001/api/post/${slug}`);
       const content = res.data.post;
-      console.log(res.data.post);
       setData(content);
       if (content.comments) {
         setComments(content.comments.reverse());
@@ -55,7 +52,7 @@ export default function ArticulePage(props) {
   const deletePost = async (e) => {
     const { _id } = data;
     try {
-      const res = await axios.delete(`http://localhost:3001/api/post/${_id}`);
+      await axios.delete(`http://localhost:3001/api/post/${_id}`);
       history.push("/");
     } catch (ex) {
       console.log(ex);
@@ -72,7 +69,7 @@ export default function ArticulePage(props) {
     const { _id } = data;
     const user = JSON.parse(window.localStorage.getItem("user"));
     try {
-      const res = await axios.put(`http://localhost:3001/api/post/${_id}`, {
+      await axios.put(`http://localhost:3001/api/post/${_id}`, {
         header: adminOptions.editHeader,
         context: adminOptions.editContext,
         author: user._id,
@@ -92,6 +89,11 @@ export default function ArticulePage(props) {
           commentID: commID,
           user: userID._id,
           value: value,
+        },
+        {
+          headers: {
+            Collections: "post",
+          },
         }
       );
       if (res.data.comments) {
@@ -131,7 +133,6 @@ export default function ArticulePage(props) {
             />
             <div className={styles.header}>
               <label>{data.header}</label>
-              <label>{data.author.username}</label>
             </div>
             {/* admin */}
             {auth.isAdmin || (auth.isModerator && adminOptions.isEdit) ? (
@@ -176,6 +177,7 @@ export default function ArticulePage(props) {
             <CommentForm
               {...props}
               id={slug}
+              collection="post"
               updateComments={(comment) => updateComments(comment)}
               commets={comments}
             />
@@ -186,6 +188,7 @@ export default function ArticulePage(props) {
           )}
           <Comments
             commets={comments}
+            collection="post"
             id={data._id}
             likesCountHandler={(comID, value) =>
               likesCountHandler(comID, value)

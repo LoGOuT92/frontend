@@ -58,3 +58,9 @@
     width: 100%;
     justify-content: center;
 }
+@media only screen and (max-width: 310px) {
+    .userPermissionsContainer{
+        padding: 0px;
+        
+    }
+  }

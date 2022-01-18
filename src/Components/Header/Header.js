@@ -16,7 +16,11 @@ export default function Header() {
   return (
     <div className={styles.headerContainer}>
       <div className={styles.navList}>
-        <li>Historia</li>
+        <li>
+          <Link to="/historia/">
+            <div>Historia</div>
+          </Link>
+        </li>
         <li>
           <Link to="/kadra/">
             <div>Kadra</div>
